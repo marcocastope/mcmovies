@@ -43,7 +43,7 @@ func (r *MovieRepository) Delete(id string) error {
 
 // GetAll obtiene las peliculas
 func (r *MovieRepository) GetAll() (movies []models.Movie) {
-	iter := r.C.Find(nil).Iter()
+	iter := r.C.Find(nil).Sort("-createdAt").Iter()
 	result := models.Movie{}
 	for iter.Next(&result) {
 		movies = append(movies, result)
@@ -53,6 +53,6 @@ func (r *MovieRepository) GetAll() (movies []models.Movie) {
 
 // GetByID ...
 func (r *MovieRepository) GetByID(id string) (movie models.Movie, err error) {
-	err = r.C.FindId(bson.M{"_id": bson.ObjectIdHex(id)}).One(&movie)
+	err = r.C.FindId(bson.ObjectIdHex(id)).One(&movie)
 	return
 }

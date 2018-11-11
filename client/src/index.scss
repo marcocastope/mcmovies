@@ -1,0 +1,24 @@
+$colors: (
+	primary-color: #b63939,
+	secondary-color: #65c540,
+	tertiary-color: #324ab6,
+);
+
+@function rem($el)  {
+	@return ($el / 16px) * 1rem;
+}
+
+$breakpoints: (
+	small: 480px,
+	middle: 640px,
+	large: 1024px
+);
+
+@mixin from($breakpoint) {
+	@media screen and(min-width: map-get($breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+
+
+

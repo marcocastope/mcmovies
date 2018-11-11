@@ -3,3 +3,6 @@
 
 # Archivo ejecutable de la app
 mcmovies.exe
+
+# node modules del cliente
+/client/node_modules/

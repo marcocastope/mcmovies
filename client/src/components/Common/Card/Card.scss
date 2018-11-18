@@ -1,0 +1,50 @@
+@import '../../../index.scss';
+
+.Card {
+	border: 1px solid map-get($colors, bordered-color);
+	margin-bottom: 1rem;
+	border-radius: 0 0 rem(4px) rem(4px);
+	background-color: #fff;
+}
+
+.Title {
+	text-align: center;
+}
+
+.Data {
+	padding: 1rem;
+}
+
+.List {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Poster {
+	height: rem(500px);
+}
+
+.Item {
+	font-weight: 700;
+}
+
+.Buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Button {
+	display: inline-block;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	border: none;
+	border-radius: rem(3px);
+	cursor: pointer;
+	color: #fff;
+	background-color: map-get($colors, success-color);
+	&:hover {
+		background-color: rgba(map-get($colors, success-color), .9);
+	}
+}
+

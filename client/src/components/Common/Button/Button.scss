@@ -1,0 +1,31 @@
+@import '../../../index.scss';
+
+.Button {
+	display: inline-block;
+	padding: .5rem 1rem;
+	border: none;
+	border-radius: rem(3px);
+	cursor: pointer;
+	color: #fff;
+}
+
+.Normal{
+	background-color: map-get($colors, primary-color);
+	&:hover {
+		background-color: rgba(map-get($colors, primary-color), .9);
+	}
+}
+
+.Delete{
+	background-color: map-get($colors, delete-color);
+	&:hover {
+		background-color: rgba(map-get($colors, delete-color), .9);
+	}
+}
+
+.Edit{
+	background-color: map-get($colors, success-color);
+	&:hover {
+		background-color: rgba(map-get($colors, success-color), .9);
+	}
+}

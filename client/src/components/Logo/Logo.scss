@@ -1,0 +1,6 @@
+@import '../../index.scss';
+
+.Logo {
+	margin: 0;
+	color: map-get($colors, primary-color);
+}

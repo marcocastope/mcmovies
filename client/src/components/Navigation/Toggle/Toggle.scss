@@ -1,0 +1,14 @@
+@import '../../../index.scss';
+
+.Toggle {
+	width: rem(30px);
+	height: rem(20px);
+	cursor: pointer;
+}
+
+.Line {
+	width: 100%;
+	height: rem(4px);
+	margin-bottom: rem(4px);
+	background-color:map-get($colors, tertiary-color);
+}

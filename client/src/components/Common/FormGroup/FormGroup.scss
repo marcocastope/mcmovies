@@ -1,0 +1,13 @@
+@import '../../../index.scss';
+
+.Label {
+	margin-bottom: .5rem;
+}
+
+.Input {
+	padding: .5rem 1rem;
+	border: 1px solid map-get($colors, bordered-color);
+	border-radius: rem(4px);
+	color: map-get($colors, tertiary-color);
+	margin-bottom: 1.5rem;
+}

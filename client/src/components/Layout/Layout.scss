@@ -1,0 +1,6 @@
+@import '../../index.scss';
+
+.Container {
+	padding: 4rem 0;
+	background: linear-gradient(map-get($colors, primary-color), map-get($colors, secondary-color), map-get($colors, primary-color))
+}

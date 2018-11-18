@@ -1,0 +1,17 @@
+@import '../../index.scss';
+
+.Container {
+	padding: 0 1rem;
+	color: #fff;
+}
+
+.Title {
+	text-align: center;
+	
+}
+
+.Form {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 0;
+}

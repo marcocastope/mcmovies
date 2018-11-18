@@ -1,18 +1,48 @@
-$colors: (
-	primary-color: #b63939,
-	secondary-color: #65c540,
-	tertiary-color: #324ab6,
-);
-
-@function rem($el)  {
-	@return ($el / 16px) * 1rem;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
+
+$font: 'Ubuntu', sans-serif;
+
+$colors: (
+	primary-color: #3B2667,
+	secondary-color: #BC78EC,
+	delete-color: #b81a1a,
+	success-color: #1aa131,
+	tertiary-color: #5d5f5f,
+	bordered-color: #c4cccc,
+);
 
 $breakpoints: (
 	small: 480px,
 	middle: 640px,
 	large: 1024px
 );
+
+$vars: (
+	header-height: 4rem,
+	gutter: 1rem,
+);
+
+@function rem($el)  {
+	@return ($el / 16px) * 1rem;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+
+body {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+	font-family: $font;
+	color: map-get($colors, tertiary-color);
+}
 
 @mixin from($breakpoint) {
 	@media screen and(min-width: map-get($breakpoints, $breakpoint)) {

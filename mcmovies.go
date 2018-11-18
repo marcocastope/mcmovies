@@ -4,20 +4,29 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/rs/cors"
+
 	"github.com/marcocastope/mcmoviesv1/common"
 	"github.com/marcocastope/mcmoviesv1/routers"
 	"github.com/urfave/negroni"
 )
 
 func main() {
-	// inicializo los paquets comunes
+
 	common.StartUp()
-	// inicilizao las rutas
+
 	router := routers.InitRoutes()
-	// iniciliza los middleware
+
+	c := cors.New(cors.Options{
+		AllowedOrigins: []string{"*"},
+		AllowedHeaders: []string{"X-Requested-With", "Content-Type"},
+		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+	})
+
 	n := negroni.Classic()
+	n.Use(c)
 	n.UseHandler(router)
-	// inicializa el server
+
 	server := &http.Server{
 		Addr:    common.AppConfig.Server,
 		Handler: n,

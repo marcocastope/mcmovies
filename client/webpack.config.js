@@ -51,6 +51,9 @@ module.exports = {
 			}
 		]
 	},
+	devServer: {
+		historyApiFallback: true, 
+	},
 	plugins: [
 		new CleanWebpackPlugin(['dist/**/*.*']),
 		new MiniCssExtractPlugin({

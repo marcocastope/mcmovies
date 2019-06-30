@@ -1,2 +1,2 @@
 # mcmovies
-CRUD de peliculas usando Golang, React y MongoDB 
+CRUD de películas usando Golang, React y MongoDB 
